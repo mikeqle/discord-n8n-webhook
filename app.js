@@ -32,6 +32,7 @@ client.on('messageCreate', async (message) => {
     await axios.post(webhookUrl, payload);
     console.log('Event sent to n8n:', payload);
   } catch (error) {
+    console.log(error);
     console.error('Error sending to n8n:', error.message);
   }
 });
